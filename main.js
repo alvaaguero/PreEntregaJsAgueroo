@@ -1,24 +1,4 @@
 
-//Acceso a compra de entradas"Fiesta Dump"
- 
-/* let edad = parseInt(prompt("ingrese su edad"))
-edad = Number(edad)
-
-if (edad > 17){
-    alert("Puedes comprar la entrada.");
-} else{
-    alert("Acceso denegado");
-}
-
-function ingrese(){
-    let nombre = prompt("Ingrese su nombre")
-    while(nombre === ""){
-        nombre = prompt("Ingrese su nombre")
-    }
-    console.log(nombre)
-}
-ingrese(); */
-
 //Bienvenida
 let saludo = prompt("Ingrese su nombre")
 alert(`Bienvenide!!! ${saludo}`)
