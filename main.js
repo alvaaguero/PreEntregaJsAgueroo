@@ -19,11 +19,11 @@ let PromedioCrecimiento = altura / (edad ** 2)
 console.log(PromedioCrecimiento)
 
 //variables de productos
-let crecimiento
+let crecimiento = 95.000
 
-let mantenimiento
+let mantenimiento = 30.000
 
-let disminucion
+let disminucion= 48.000
 
 
 //recomendacion de cant. productos
@@ -78,7 +78,7 @@ for ( let producto of lista_produ){
 }
 //Seleccion de produ
 
-function busqueda_producto(){
+function busqueda_producto(servicio){
     return servicio.nombreProdu == seleccion_produ
 }
 
@@ -98,14 +98,39 @@ while(resultado_busqueda == undefined){
 let precio_producto = 0
 
 if ( seleccion_produ == "Crecimiento"){
-    precio_producto = crece
+    precio_producto = crecimiento
 }
 else if ( seleccion_produ == "Mantenimiento"){
-    precio_servicio = mantener
+    precio_servicio = mantenimiento
 }
 else if ( seleccion_produ == "Disminucion"){
-    precio_producto = disminuir
+    precio_producto = disminucion
 }
 else{
     console.log("Producto erroneo")
 }
+
+//Calculamos la cant. de productos que quiera el cliente
+
+let cantidad_producto = 0
+
+do{
+    cantidad_producto = prompt("Ingrese la cantidad de productos que desea obtener")
+}while(isNaN(cantidad_producto))
+
+//precio final
+let precio_final = 0
+
+function precio_total(producto, cantidad){
+    precio_final = (producto * cantidad)
+}
+
+precio_total(precio_producto, cantidad_producto);
+
+alert(`Total a pagar: $${precio_final}`)
+
+
+
+
+//Arrays
+//
