@@ -24,3 +24,11 @@ const productos = [
     {id:12, nombre: "Guantes Nike Dump", descripcion: "Guantes de Arquero", precio: 25.000, imagen: "", 
     categoria: "accesorios"}
 ];
+function guardarProductosLS(productos){
+    localStorage.setItem("productos", JSON.stringify(productos))
+}
+function cargarProductosLS(){
+    return JSON.parse(localStorage.getItem("productos"))
+}
+
+guardarProductosLS(productos);
