@@ -8,7 +8,7 @@ function rederProductos() {
                 <img src="${"img/" + producto.imagen}" alt="${producto.nombre}" class="card-img-top" />
                 <div class="card-body">
                     <p class="card-text">${producto.nombre}</p>
-                    <p><button class="btn btn-warning">Agregar (+)</button>
+                    <p><button class="btn btn-warning" onclick="agregarAlCarrito(${producto.id});">Agregar (+)</button>
                 </div>
             </div>
         </div>`;

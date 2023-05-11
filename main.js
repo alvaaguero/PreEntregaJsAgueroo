@@ -28,7 +28,7 @@ function guardarProductosLS(productos){
     localStorage.setItem("productos", JSON.stringify(productos))
 }
 function cargarProductosLS(){
-    return JSON.parse(localStorage.getItem("productos"))
+    return JSON.parse(localStorage.getItem("productos")) || [];
 }
 
 guardarProductosLS(productos);
