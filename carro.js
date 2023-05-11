@@ -23,25 +23,24 @@ function agregarAlCarrito(id) {
     guardarProductosCarrito(carrito);
     console.log("Se agrego el producto con el #" + id);
     renderBotonCarrito();
-
 }
 
 function buscarProducto(id) {
     const productos = cargarProductosLS();
 
-    return productos.find(item => item.id === id)
+    return productos.find(item => item.id === id);
 }
 
 function totalProductosCarrito() {
     const productos = cargarProductosCarrito();
+    
     return productos.length;
-
 }
 
 function renderBotonCarrito() {
     const salida = `<a href="carrito.html" id="carrito" class="btn btn-warning position-relative">
-    <img src="img/carrito..png" alt="carrito" width="24"/>
-    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${totalProductosCarrito()}</span>
-  </a>`;
+        <img src="img/carrito..png" alt="carrito" width="24"/>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${totalProductosCarrito()}</span>
+    </a>`;
   document.getElementById("carrito").innerHTML = salida;
 }
