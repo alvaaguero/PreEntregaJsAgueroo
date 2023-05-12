@@ -17,3 +17,4 @@ function renderProductos() {
     document.getElementById("productos").innerHTML = salida;
 }
 renderProductos(); 
+renderBotonCarrito();
