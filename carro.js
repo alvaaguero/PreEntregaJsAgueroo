@@ -38,9 +38,5 @@ function totalProductosCarrito() {
 }
 
 function renderBotonCarrito() {
-    const salida = `<a href="carrito.html" id="carrito" class="btn btn-warning position-relative">
-        <img src="img/carrito..png" alt="carrito" width="24"/>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${totalProductosCarrito()}</span>
-    </a>`;
-  document.getElementById("carrito").innerHTML = salida;
+  document.getElementById("carrito").innerText = totalProductosCarrito();
 }
