@@ -17,7 +17,7 @@ function renderProductosCarrito() {
             <td>${producto.nombre}</td>
             <td>${producto.cantidad} X $${producto.precio}</td>
             <td>$${producto.cantidad * producto.precio}</td>
-            <td class="text-end"><button class="btn btn-warning" onclick="eliminarProducto(${producto.id});"><img src="img/trash.png" alt="Eliminar Producto" width="16" /></button></td>
+            <td class="text-end"><button class="btn btn-warning" onclick="eliminarProducto(${producto.id});"title= Eliminar Producto"><img src="img/trash.png" alt="Eliminar Producto" width="16" /></button></td>
             </tr>`;
         }
 
