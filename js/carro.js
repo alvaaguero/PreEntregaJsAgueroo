@@ -9,6 +9,8 @@ function cargarProductosCarrito() {
 
 function vaciarCarrito() {
     localStorage.removeItem("carrito");
+    renderProductosCarrito();
+    renderBotonCarrito();
 
 }
 
@@ -35,6 +37,12 @@ function totalProductosCarrito() {
     const productos = cargarProductosCarrito();
     
     return productos.length;
+}
+
+function totalPagarCarrito() {
+    const productos = cargarProductosCarrito();
+    
+    return productos.reduce((total, item) => total += item.precio, 0);
 }
 
 function renderBotonCarrito() {

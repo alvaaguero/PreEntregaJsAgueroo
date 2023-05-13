@@ -3,21 +3,33 @@ function renderProductosCarrito() {
     let salida = "";
 
     if (totalProductosCarrito() > 0) {
+        salida += `<table class="table">
+        <tr>
+        <td colspan="4" class="text-end"><button class="btn btn-warning" onclick="vaciarCarrito()">Vaciar Carrito</button></td>
+        <tr>`;
+        
+        
+        ;
+
         for (producto of productos) {
-            salida += `<div class="col-md-3 my-3">
-                <div class="card text-center border-0">
-                    <img src="${"img/" + producto.imagen}" alt="${producto.nombre}" class="card-img-top" />
-                    <div claSss="card-body">
-                        <p class="card-text">${producto.nombre}</p>
-                        <p><button class="btn btn-warning" onclick="agregarAlCarrito(${producto.id});">Agregar (+)</button>
-                    </div>
-                </div>
-            </div>`;
+            salida += `<tr>
+            <td><img src="${"img/" + producto.imagen}" alt="${producto.nombre}" width="80" /></td>
+            <td>${producto.nombre}</td>
+            <td>$${producto.precio}</td>
+            <td class="text-end"><button class="btn btn-warning"><img src="img/trash.png" alt="Eliminar Producto" width="16" /></button></td>
+            </tr>`;
         }
+
+        salida += `<tr>
+        <td colspan="2">Total a Pagar</td>
+        <td>$${totalPagarCarrito()}</td>
+        <td>&nbsp;</td>
+        </tr>`;
+        salida += `</table>`
     } else{
         salida = `<div class="alert alert-danger text-center" role="alert">No se agregaron productos en el Carrito!
-      </div>
-      `
+      </div>`
+    
     }
     
 
@@ -25,4 +37,3 @@ function renderProductosCarrito() {
 }
 renderProductosCarrito();
 renderBotonCarrito(); 
-
